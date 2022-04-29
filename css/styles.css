@@ -15,6 +15,10 @@
   --primary-btn-text-color: #212121;
   --secondary-btn-text-color: #ffffff;
   --hero-btn-hover-bgc: #188ce8;
+
+  --transform-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --color-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --bgc-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*---------------------- BASIC STYLES ------------------------- */
@@ -116,7 +120,7 @@ body {
 .header-link {
   color: var(--primary-title-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--color-transition);
 }
 .current-link {
   position: relative;
@@ -143,7 +147,7 @@ body {
   display: inline-flex;
   align-items: center;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--color-transition);
 }
 .auth-link:hover,
 .auth-link:focus,
@@ -208,7 +212,7 @@ body {
 
   padding: 10px 32px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--bgc-transition);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -328,7 +332,7 @@ body {
   height: 44px;
   border-radius: 50%;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--bgc-transition);
 }
 .social-icon {
   fill: #afb1b8;
@@ -386,8 +390,7 @@ body {
 
   padding: 6px 22px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: var(--color-transition), var(--bgc-transition),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .works-button:hover,
@@ -473,7 +476,7 @@ body {
   padding: 63px 24px;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transform-transition);
 }
 .examples-link:hover .examples-img-text,
 .examples-link:focus .examples-img-text {
@@ -510,7 +513,7 @@ body {
   text-decoration: none;
 
   display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--color-transition);
 }
 .footer-link:nth-of-type(2) {
   margin-bottom: 9px;
@@ -546,7 +549,7 @@ body {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--bgc-transition);
 }
 .footer-socials:hover,
 .footer-socials:focus {
@@ -586,8 +589,7 @@ body {
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transform-transition), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -612,7 +614,7 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--bgc-transition);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -620,7 +622,7 @@ body {
 }
 .modal-btn-icon {
   transform: scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transform-transition);
 }
 .modal-btn:hover .modal-btn-icon,
 .modal-btn:focus .modal-btn-icon {
